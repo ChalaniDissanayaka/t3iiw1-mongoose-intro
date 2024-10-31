@@ -6,8 +6,14 @@ async function seed (){
 	
 	await createPost("Example title", "Example content blah blah blah");
 
+    let resultFindOne = await findOnePost({title: "Example title", content: "Example content blah blah blah"});
 
+	console.log(resultFindOne.title);
+	console.log(resultFindOne._id);
+	console.log(resultFindOne.id);
 
+    // let resultFindMany = await findManyPosts({title:"Nonexistent title"});
+	// console.log(resultFindMany);
 
 
 
