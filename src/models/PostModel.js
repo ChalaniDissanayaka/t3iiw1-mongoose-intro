@@ -7,6 +7,7 @@ const PostSchema = new mongoose.Schema({
 		required: true,
 		minLength: 4,
 		trim: true
+		// unique:true
 	},
 	content: String, 
 	date: {
