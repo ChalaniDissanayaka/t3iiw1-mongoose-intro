@@ -1,4 +1,4 @@
-const { createPost } = require("./crud/PostCrud");
+const { createPost, findManyPosts, findOnePost } = require("./crud/PostCrud");
 const { dbConnect, dbDisconnect } = require("./database");
 
 async function seed (){
