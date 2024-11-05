@@ -17,11 +17,30 @@ router.get("/search/:postId", async (request, response) => {
 	});
 });
 
+router.get("/query", async (request, response) => {
+	// get the query from the request.body
+	console.log(request.body.query);
+	
+	let query = request.body.query;
+	// let {query} = request.body;
+
+	// use the query in a Post CRUD function 
+	let result = await findOnePost(query);
+    
+	// return the result 
+	response.json({
+		data: result
+	});
+});
+
+// localhost:8080/posts/all
+// localhost:8080/posts/search/<id:(hduudnw7e2j3jjj)>
+
 // get all posts
 router.get("/all", async (request, response) => {
 
 	let result = await findManyPosts({});
-    
+
 	response.json({
 		data: result
 	});

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "t3iiw1-mongoose-intro",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
