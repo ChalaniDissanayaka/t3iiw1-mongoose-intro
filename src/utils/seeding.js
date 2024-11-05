@@ -1,4 +1,5 @@
 const { createPost, findManyPosts, findOnePost } = require("./crud/PostCrud");
+const { createUser } = require("./crud/UserCrud");
 const { dbConnect, dbDisconnect } = require("./database");
 
 // require("dotenv").config();
@@ -6,7 +7,13 @@ const { dbConnect, dbDisconnect } = require("./database");
 async function seed (){
 	// await dbConnect();
 	
-	await createPost("Example title", "Example content blah blah blah");
+	let newUser = await createUser("alexh", true, "alex@bigfootds.com");
+	
+	await createPost(
+		"Example title", 
+		"Example content blah blah blah",
+		newUser.id
+	);
 
     let resultFindOne = await findOnePost({title: "Example title", content: "Example content blah blah blah"});
 
