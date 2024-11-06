@@ -26,7 +26,7 @@ router.get("/query", async (request, response) => {
 
 	// use the query in a Post CRUD function 
 	let result = await findOnePost(query);
-    
+
 	// return the result 
 	response.json({
 		data: result
@@ -34,7 +34,7 @@ router.get("/query", async (request, response) => {
 });
 
 // localhost:8080/posts/all
-// localhost:8080/posts/search/<id:(hduudnw7e2j3jjj)>
+// localhost:8080/posts/search/<id:(agsuemcfkd7ebde9wj)>
 
 // get all posts
 router.get("/all", async (request, response) => {
