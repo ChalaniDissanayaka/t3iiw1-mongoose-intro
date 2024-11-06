@@ -12,7 +12,7 @@ const PostSchema = new mongoose.Schema({
 		trim: true
 		// unique:true
 	},
-	// content: String, 
+	//content: String, 
 	content: [LocalizedContentSchema],
 	date: {
 		type: Date,
